@@ -9,9 +9,10 @@ const app = express();
 // connect to mongodb & listen for requests
 const dbURI = "mongodb+srv://kane:Test1234QWERTY@node-tuts.ep0bq.mongodb.net/node-tuts?retryWrites=true&w=majority";
 
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(80,"0.0.0.0"),console.log("listening"))
+  .then(result => app.listen(PORT),console.log("listening"))
   .catch(err => console.log(err));
 
 // register view engine
