@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/login.css">
+    </head>
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="login">
+	<br><h1>Login</h1> 
+    <form action="/blogs">
+    	<input type="text" name="u" placeholder="Username" required="required" />
+        <input type="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in</button>
+    </form>
+
+    <h3 style="text-align: center; color: rgba(240, 248, 255, 0.788); font-size: small;">Dont worry the login page is fake just enter anything!</h3>
+</div>
+
+  
+</body>
+</html>

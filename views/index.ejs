@@ -1,0 +1,72 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div style="float: left;" class="blogs content">
+    <h2>All Blogs</h2>
+    
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <table>
+          <tr>
+            <th>
+              <img style="height: 35px; width:35px;" src="mushroom.png" alt="">
+            </th>
+            <th>
+              <a class="single" href="/blogs/<%= blog._id %>">
+                <h3 class="title"><%= blog.title %></h3>
+                <p class="snippet"><%= blog.snippet %></p>
+              </a>
+            </th>
+            
+          </tr>
+        </table>
+        
+    
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+    
+  </div>
+  <a href="https://www.gamesradar.com/new-games-2021/">
+    <div style="margin: 5px; float: left; border: 1px solid #ddd; height: 300px; width: 300px;">
+      <h1 style="background-color: rgb(119, 94, 94); text-align: center; ">All New Games</h1>
+      
+      <img style="width: 300px;height: 234px;object-fit:fill;overflow-y:hidden;" src="https://cdn.mos.cms.futurecdn.net/VkqPZ9gbkjUu3tsG4SyBpB.jpg" alt="">
+    </div>
+  </a>
+
+  <a href="https://www.polygon.com/best-games/22302900/best-games-2021-ps4-ps5-pc-xbox-one-xbox-series-x-switch-ios-android">
+    <div style="margin: 5px; float: left; border: 1px solid #ddd; height: 300px; width: 300px;">
+      <h1 style="background-color: rgb(119, 94, 94); text-align: center; ">Top Games of 2021</h1>
+      
+      <img style="width: 300px;height: 234px;object-fit:fill;overflow-y:hidden;" src="https://cdn.vox-cdn.com/thumbor/Lmq4DJ0woomPSySuCeQwaR2j-Zg=/0x0:1280x720/1820x1024/filters:focal(162x100:366x304):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/68892780/Monster_Hunter_Rise___0910015800_s__260_.6.jpg" alt="">
+    </div>
+  </a>
+
+  <a href="https://www.ign.com/lists/top-100-games">
+    <div style="margin: 5px; float: left; border: 1px solid #ddd; height: 300px; width: 300px;">
+      <h1 style="background-color: rgb(119, 94, 94); text-align: center; ">Top Games Ever</h1>
+      
+      <img style=" width: 300px;height: 234px;object-fit:fill;overflow-y:hidden;" src="https://assets1.ignimgs.com/2018/03/26/top100games-desktop-1522083029009.jpg" alt="">
+    </div>
+  </a>
+
+  <a href="https://www.gamesradar.com/new-games-2021/">
+    <div style="margin: 5px; float: left; border: 1px solid #ddd; height: 300px; width: 300px;">
+      <h1 style="background-color: rgb(119, 94, 94); text-align: center; ">All New Games</h1>
+      
+      <img style="width: 300px;height: 234px;object-fit:fill;overflow-y:hidden;" src="https://cdn.mos.cms.futurecdn.net/VkqPZ9gbkjUu3tsG4SyBpB.jpg" alt="">
+    </div>
+  </a>
+  
+<div style="float: none;" class="footer">
+  <%- include("./partials/footer.ejs") %>
+</div>
+  
+</body>
+</html>
